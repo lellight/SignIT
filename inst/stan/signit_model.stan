@@ -6,7 +6,7 @@ functions {
     array[N, L] real beta;        // beta-binomial: beta = (1 - mu) * kappa
                            // Note that mu values are first adjusted by a values for each mutation
 
-    real sig_likelihood[N,K];         // Matrix of signature likelihoods for each mutation
+    array[N, K] real sig_likelihood;        // Matrix of signature likelihoods for each mutation
     real pop_likelihood[N,L];         // Matrix of population likelihoods for each mutation
     real likelihood_sums[L, K, N];    // 
     int idx;                          // mapping l and k indices to corresponding coefficient of phi
