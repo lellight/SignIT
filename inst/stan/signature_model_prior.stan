@@ -2,7 +2,7 @@ data {
   int<lower=1> S; // number of signatures
   int<lower=1> N; // number of mutations
   int<lower=1> R; // number of mutation types (vocabulary size)
-  int<lower=0> v[R]; // mutation catalog vector
+  array[R] int<lower=0> v; // mutation catalog vector
   matrix[R, S] ref_signatures; // reference mutation signatures (theta)
   real<lower=0,upper=1> prior[S];
 }
