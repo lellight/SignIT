@@ -1,6 +1,6 @@
 functions {
   real compute_log_likelihood(
-    int N, int L, int K, array[] int x, array[] int d, vector a, vector mu, real kappa_minus_two, int[] v, matrix ref_signatures, vector phi
+    int N, int L, int K, array[] int x, array[] int d, vector a, vector mu, real kappa_minus_two, array[] int v, matrix ref_signatures, vector phi
   ) {
     real alpha[N,L];       // beta-binomial: alpha = mu * kappa
     real beta[N,L];        // beta-binomial: beta = (1 - mu) * kappa
