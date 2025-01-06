@@ -51,7 +51,7 @@ data {
                                     // Signature-specific Data:
   int<lower=1> K;                   // number of reference signatures
   int<lower=1> R;                   // number of mutation types (vocabulary size, usually 96)
-  int v[N];                         // mutation type dummy variable for each mutation
+  array[N] int v;                         // mutation type dummy variable for each mutation
   matrix[K, R] ref_signatures;      // reference mutation signatures (S matrix in the model)
 
                                     // Clonality-specific Data:
