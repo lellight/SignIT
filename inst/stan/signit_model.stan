@@ -8,7 +8,7 @@ functions {
 
     array[N, K] real sig_likelihood;        // Matrix of signature likelihoods for each mutation
     array[N, L] real pop_likelihood;         // Matrix of population likelihoods for each mutation
-    real likelihood_sums[L, K, N];    // 
+    array[L, K, N] real likelihood_sums;    // 
     int idx;                          // mapping l and k indices to corresponding coefficient of phi
     real log_likelihood;
 
