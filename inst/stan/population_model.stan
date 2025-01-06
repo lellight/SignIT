@@ -19,8 +19,8 @@ transformed parameters {
   vector<lower=0, upper=1>[L] mu = inv_logit(mu_ordered);
 }
 model {
-  real alpha[N,L];       // beta-binomial: alpha = mu * kappa
-  real beta[N,L];        // beta-binomial: beta = (1 - mu) * kappa
+  array[N, L] real alpha;       // beta-binomial: alpha = mu * kappa
+  array[N, L] real beta;        // beta-binomial: beta = (1 - mu) * kappa
                             // Note that mu values are first adjusted by a values for each mutation
 
   matrix[L,N] pop_likelihood;
