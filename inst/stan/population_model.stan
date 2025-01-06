@@ -1,8 +1,8 @@
 data {
   int<lower=1> N; // number of mutations
   int<lower=1> L; // number of clones
-  int x[N]; // number of alt reads for each mutation
-  int d[N]; // number of total reads for each mutation
+  array[N] int<lower=0> x; // number of alt reads for each mutation
+  array[N] int<lower=0> d; // number of total reads for each mutation
   vector<lower=1>[N] Ct; // tumour copy number at mutation site
   vector<lower=1>[N] Cn; // normal copy number at mutation site
   real purity; // tumour content as a fraction from 0 to 1
