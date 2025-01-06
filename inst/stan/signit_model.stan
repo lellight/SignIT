@@ -56,8 +56,8 @@ data {
 
                                     // Clonality-specific Data:
   int<lower=1> L;                   // number of clones
-  int x[N];                         // number of alt reads for each mutation
-  int d[N];                         // number of total reads for each mutation (depth)
+  array[N] int x;                         // number of alt reads for each mutation
+  array[N] int d;                         // number of total reads for each mutation (depth)
   vector[N] a;                      // correction factor (purity / (purity * Ct) + ((1 - purity) * Cn))
   vector<lower=0,upper=1>[L] mu;    // subpopulation beta-binomial means
 }
